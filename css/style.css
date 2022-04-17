@@ -8,3 +8,8 @@
 /* Dashboard */
 
 /* Products */
+
+/* Categories */
+.modal-category {
+  max-width: 800px !important;
+}

@@ -268,124 +268,456 @@
             <div
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
-              <h1 class="h3 mb-0 text-gray-800">Edit Category</h1>
+              <h1 class="h3 mb-0 text-gray-800">Category List</h1>
               <div class="buttons">
                 <!-- Update Button -->
-                <button type="button" class="btn btn-success shadow">
-                  <i class="pr-2 fa-solid fa-floppy-disk"></i>Save
+                <button
+                  type="button"
+                  class="btn btn-primary pr-2 shadow"
+                  data-toggle="modal"
+                  data-target="#addModalCenter"
+                >
+                  <i class="fa-solid fa-pen-to-square pr-2"></i>Add New
                 </button>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="addModalCenter"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="addModalCenterTitle"
+              aria-hidden="true"
+            >
+              <div
+                class="modal-dialog modal-category modal-dialog-centered"
+                role="document"
+              >
+                <div class="modal-content">
+                  <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="addModalCenterTitle">
+                      Edit Category
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <!-- Content Column -->
+                      <div class="col-lg-8 mb-4">
+                        <div class="card bg-white mb-4">
+                          <div class="card-body">
+                            <h5>Basic information</h5>
+                            <form action="">
+                              <div class="form-row">
+                                <div class="form-group col-md-12">
+                                  <label for="cName">Name</label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="cName"
+                                    placeholder="Category Name"
+                                  />
+                                </div>
+                                <div class="form-group col-md-12">
+                                  <label for="slug">slug</label>
+                                  <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                      <div class="input-group-text">
+                                        safeline.com/category/
+                                      </div>
+                                    </div>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="slug"
+                                      placeholder="hand-tools"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="form-group col-lg-12">
+                                  <label for="cDescription">Description</label>
+                                  <textarea
+                                    class="form-control"
+                                    id="cDescription"
+                                    rows="3"
+                                  ></textarea>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                        <div class="card bg-white">
+                          <div class="card-body">
+                            <div class="form-row">
+                              <div class="col-lg-12">
+                                <h5>Visibilty</h5>
+                              </div>
+                              <div class="col-lg-12">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input position-static"
+                                    type="radio"
+                                    name="cPublish"
+                                    id="cPublish"
+                                    value="Published"
+                                  />
+                                  <label class="form-check-label" for="cPublish"
+                                    >Published</label
+                                  >
+                                </div>
+                              </div>
+                              <div class="col-lg-12">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input position-static"
+                                    type="radio"
+                                    name="cPublish"
+                                    id="cPublish"
+                                    value="Hidden"
+                                    aria-label="Hidden"
+                                  />
+                                  <label class="form-check-label" for="cPublish"
+                                    >Hidden</label
+                                  >
+                                </div>
+                              </div>
+                              <div class="col-lg-12 mt-4">
+                                <div class="form-group">
+                                  <label for="parentCategory"
+                                    >Parent Category</label
+                                  >
+                                  <select
+                                    class="form-control"
+                                    id="parentCategory"
+                                  >
+                                    <option>None</option>
+                                    <option>Tools</option>
+                                    <option>Food</option>
+                                    <option>Snacks</option>
+                                    <option>Craft</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-12 mt-4">
+                                <div class="form-group">
+                                  <div class="custom-file">
+                                    <input
+                                      type="file"
+                                      class="custom-file-input"
+                                      id="cImage"
+                                    />
+                                    <label
+                                      class="custom-file-label"
+                                      for="cImage"
+                                      >Choose Image</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Save changes
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- Content Row -->
             <div class="row">
               <!-- Content Column -->
-              <div class="col-lg-8 mb-4">
-                <div class="card bg-white mb-4">
-                  <div class="card-body">
-                    <h5>Basic information</h5>
-                    <form action="">
-                      <div class="form-row">
-                        <div class="form-group col-md-12">
-                          <label for="cName">Name</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="cName"
-                            placeholder="Category Name"
-                          />
-                        </div>
-                        <div class="form-group col-md-12">
-                          <label for="slug">slug</label>
-                          <div class="input-group mb-2 mr-sm-2">
-                            <div class="input-group-prepend">
-                              <div class="input-group-text">
-                                safeline.com/category/
-                              </div>
-                            </div>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="slug"
-                              placeholder="hand-tools"
-                            />
-                          </div>
-                        </div>
-                        <div class="form-group col-lg-12">
-                          <label for="cDescription">Description</label>
-                          <textarea
-                            class="form-control"
-                            id="cDescription"
-                            rows="3"
-                          ></textarea>
-                        </div>
-                      </div>
-                    </form>
+              <div class="col-lg-12 mb-4">
+                <!-- Order Chart -->
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Category Table
+                    </h6>
                   </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4">
-                <div class="card bg-white">
                   <div class="card-body">
-                    <div class="form-row">
-                      <div class="col-lg-12">
-                        <h5>Visibilty</h5>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-check">
-                          <input
-                            class="form-check-input position-static"
-                            type="radio"
-                            name="cPublish"
-                            id="cPublish"
-                            value="Published"
-                          />
-                          <label class="form-check-label" for="cPublish"
-                            >Published</label
-                          >
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-check">
-                          <input
-                            class="form-check-input position-static"
-                            type="radio"
-                            name="cPublish"
-                            id="cPublish"
-                            value="Hidden"
-                            aria-label="Hidden"
-                          />
-                          <label class="form-check-label" for="cPublish"
-                            >Hidden</label
-                          >
-                        </div>
-                      </div>
-                      <div class="col-lg-12 mt-4">
-                        <div class="form-group">
-                          <label for="parentCategory">Parent Category</label>
-                          <select class="form-control" id="parentCategory">
-                            <option>None</option>
-                            <option>Tools</option>
-                            <option>Food</option>
-                            <option>Snacks</option>
-                            <option>Craft</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-12 mt-4">
-                        <div class="form-group">
-                          <div class="custom-file">
-                            <input
-                              type="file"
-                              class="custom-file-input"
-                              id="cImage"
-                            />
-                            <label class="custom-file-label" for="cImage"
-                              >Choose Image</label
-                            >
-                          </div>
-                        </div>
-                      </div>
+                    <div class="table-responsive">
+                      <table
+                        class="table table-bordered"
+                        id="dataTable"
+                        width="100%"
+                        cellspacing="0"
+                      >
+                        <thead>
+                          <tr>
+                            <th>
+                              <input
+                                type="checkbox"
+                                value=""
+                                id="flexCheckDefault"
+                              />
+                            </th>
+                            <th>Name</th>
+                            <th>Items</th>
+                            <th>Visibility</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <input
+                                type="checkbox"
+                                value=""
+                                id="flexCheckDefault"
+                              />
+                            </td>
+                            <td>Tatyana Fitzpatrick</td>
+                            <td><span>72</span></td>
+                            <td>
+                              <div class="badge badge-secondary">Hidden</div>
+                            </td>
+                            <td>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-sa-muted btn-sm"
+                                  type="button"
+                                  id="CatDropdown"
+                                  data-toggle="dropdown"
+                                  aria-expanded="false"
+                                  aria-level="More"
+                                >
+                                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                                <ul
+                                  class="dropdown-menu dropdown-menu-end"
+                                  aria-labelledby=""
+                                >
+                                  <li>
+                                    <a class="dropdown-item" href="#">Edit</a>
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item" href="#">Delete</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input
+                                type="checkbox"
+                                value=""
+                                id="flexCheckDefault"
+                              />
+                            </td>
+                            <td>Grocery</td>
+                            <td><span>102</span></td>
+                            <td>
+                              <div class="badge badge-success">Visible</div>
+                            </td>
+                            <td>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-sa-muted btn-sm"
+                                  type="button"
+                                  id="CatDropdown"
+                                  data-toggle="dropdown"
+                                  aria-expanded="false"
+                                  aria-level="More"
+                                >
+                                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                                <ul
+                                  class="dropdown-menu dropdown-menu-end"
+                                  aria-labelledby=""
+                                >
+                                  <li>
+                                    <a class="dropdown-item" href="#">Edit</a>
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item" href="#">Delete</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input
+                                type="checkbox"
+                                value=""
+                                id="flexCheckDefault"
+                              />
+                            </td>
+                            <td>Grocery</td>
+                            <td><span>102</span></td>
+                            <td>
+                              <div class="badge badge-success">Visible</div>
+                            </td>
+                            <td>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-sa-muted btn-sm"
+                                  type="button"
+                                  id="CatDropdown"
+                                  data-toggle="dropdown"
+                                  aria-expanded="false"
+                                  aria-level="More"
+                                >
+                                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                                <ul
+                                  class="dropdown-menu dropdown-menu-end"
+                                  aria-labelledby=""
+                                >
+                                  <li>
+                                    <a class="dropdown-item" href="#">Edit</a>
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item" href="#">Delete</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input
+                                type="checkbox"
+                                value=""
+                                id="flexCheckDefault"
+                              />
+                            </td>
+                            <td>Grocery</td>
+                            <td><span>102</span></td>
+                            <td>
+                              <div class="badge badge-success">Visible</div>
+                            </td>
+                            <td>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-sa-muted btn-sm"
+                                  type="button"
+                                  id="CatDropdown"
+                                  data-toggle="dropdown"
+                                  aria-expanded="false"
+                                  aria-level="More"
+                                >
+                                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                                <ul
+                                  class="dropdown-menu dropdown-menu-end"
+                                  aria-labelledby=""
+                                >
+                                  <li>
+                                    <a class="dropdown-item" href="#">Edit</a>
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item" href="#">Delete</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input
+                                type="checkbox"
+                                value=""
+                                id="flexCheckDefault"
+                              />
+                            </td>
+                            <td>Grocery</td>
+                            <td><span>102</span></td>
+                            <td>
+                              <div class="badge badge-success">Visible</div>
+                            </td>
+                            <td>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-sa-muted btn-sm"
+                                  type="button"
+                                  id="CatDropdown"
+                                  data-toggle="dropdown"
+                                  aria-expanded="false"
+                                  aria-level="More"
+                                >
+                                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                                <ul
+                                  class="dropdown-menu dropdown-menu-end"
+                                  aria-labelledby=""
+                                >
+                                  <li>
+                                    <a class="dropdown-item" href="#">Edit</a>
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item" href="#">Delete</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input
+                                type="checkbox"
+                                value=""
+                                id="flexCheckDefault"
+                              />
+                            </td>
+                            <td>Grocery</td>
+                            <td><span>102</span></td>
+                            <td>
+                              <div class="badge badge-success">Visible</div>
+                            </td>
+                            <td>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-sa-muted btn-sm"
+                                  type="button"
+                                  id="CatDropdown"
+                                  data-toggle="dropdown"
+                                  aria-expanded="false"
+                                  aria-level="More"
+                                >
+                                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                                <ul
+                                  class="dropdown-menu dropdown-menu-end"
+                                  aria-labelledby=""
+                                >
+                                  <li>
+                                    <a class="dropdown-item" href="#">Edit</a>
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item" href="#">Delete</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
