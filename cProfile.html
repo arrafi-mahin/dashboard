@@ -10,7 +10,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Category</title>
+    <title>Profile</title>
 
     <!-- Custom fonts for this template-->
     <link
@@ -58,15 +58,15 @@
           >
         </li>
 
-        <li class="nav-item active">
-          <a class="nav-link" href="#">
+        <li class="nav-item">
+          <a class="nav-link" href="category.html">
             <i class="fas fa-bars"></i
             ><i class="fa-solid fa-grid-horizontal"></i>
             <span>Category</span></a
           >
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="customers.html">
             <i class="fas fa-users"></i
             ><i class="fa-solid fa-grid-horizontal"></i>
@@ -75,7 +75,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="order.html">
+          <a class="nav-link" href="#">
             <i class="fas fa-compass"></i
             ><i class="fa-solid fa-grid-horizontal"></i> <span>Orders</span></a
           >
@@ -268,36 +268,36 @@
             <div
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
-              <h1 class="h3 mb-0 text-gray-800">Category List</h1>
+              <h1 class="h3 mb-0 text-gray-800">Tatyana Fitzpatrick</h1>
               <div class="buttons">
-                <!-- Update Button -->
+                <button type="button" class="btn btn-light pr-2">
+                  <i class="fa-solid fa-pen-to-square pr-2"></i>Delete
+                </button>
+                <!-- New Button -->
                 <button
                   type="button"
-                  class="btn btn-primary pr-2 shadow"
+                  class="btn btn-warning text-dark pr-2"
                   data-toggle="modal"
-                  data-target="#addModalCenter"
+                  data-target="#profileEdit"
                 >
-                  <i class="fa-solid fa-pen-to-square pr-2"></i>Add New
+                  <i class="fa-solid fa-pen-to-square pr-2"></i>Edit
                 </button>
               </div>
             </div>
             <!-- Modal -->
             <div
               class="modal fade"
-              id="addModalCenter"
+              id="profileEdit"
               tabindex="-1"
               role="dialog"
-              aria-labelledby="addModalCenterTitle"
+              aria-labelledby="profileEdit"
               aria-hidden="true"
             >
-              <div
-                class="modal-dialog modal-category modal-dialog-centered"
-                role="document"
-              >
+              <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="addModalCenterTitle">
-                      Edit Category
+                    <h5 class="modal-title" id="profileCenterTitle">
+                      Edit Profile
                     </h5>
                     <button
                       type="button"
@@ -311,39 +311,57 @@
                   <div class="modal-body">
                     <div class="row">
                       <!-- Content Column -->
-                      <div class="col-lg-8 mb-4">
-                        <div class="card bg-white mb-4">
+                      <div class="col-lg-12">
+                        <div class="card bg-white">
                           <div class="card-body">
                             <h5>Basic information</h5>
                             <form action="">
                               <div class="form-row">
-                                <div class="form-group col-md-12">
-                                  <label for="cName">Name</label>
+                                <div class="form-group col-md-6">
+                                  <label for="sName">Shop</label>
                                   <input
                                     type="text"
                                     class="form-control"
-                                    id="cName"
-                                    placeholder="Category Name"
+                                    id="sName"
+                                    placeholder="Shop Name"
+                                  />
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="oName">Owner</label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="oName"
+                                    placeholder="Owner Name"
                                   />
                                 </div>
                                 <div class="form-group col-md-12">
-                                  <label for="slug">slug</label>
+                                  <label for="mobile">Mobile</label>
                                   <div class="input-group mb-2 mr-sm-2">
                                     <div class="input-group-prepend">
-                                      <div class="input-group-text">
-                                        safeline.com/category/
-                                      </div>
+                                      <div class="input-group-text">+880</div>
                                     </div>
                                     <input
-                                      type="text"
+                                      type="number"
                                       class="form-control"
-                                      id="slug"
-                                      placeholder="hand-tools"
+                                      id="mobile"
+                                      placeholder=""
+                                    />
+                                  </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                  <label for="email">Email</label>
+                                  <div class="input-group mb-2 mr-sm-2">
+                                    <input
+                                      type="email"
+                                      class="form-control"
+                                      id="email"
+                                      placeholder=""
                                     />
                                   </div>
                                 </div>
                                 <div class="form-group col-lg-12">
-                                  <label for="cDescription">Description</label>
+                                  <label for="cDescription">Address</label>
                                   <textarea
                                     class="form-control"
                                     id="cDescription"
@@ -352,80 +370,6 @@
                                 </div>
                               </div>
                             </form>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-4">
-                        <div class="card bg-white">
-                          <div class="card-body">
-                            <div class="form-row">
-                              <div class="col-lg-12">
-                                <h5>Visibilty</h5>
-                              </div>
-                              <div class="col-lg-12">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input position-static"
-                                    type="radio"
-                                    name="cPublish"
-                                    id="cPublish"
-                                    value="Published"
-                                  />
-                                  <label class="form-check-label" for="cPublish"
-                                    >Published</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-lg-12">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input position-static"
-                                    type="radio"
-                                    name="cPublish"
-                                    id="cPublish"
-                                    value="Hidden"
-                                    aria-label="Hidden"
-                                  />
-                                  <label class="form-check-label" for="cPublish"
-                                    >Hidden</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-lg-12 mt-4">
-                                <div class="form-group">
-                                  <label for="parentCategory"
-                                    >Parent Category</label
-                                  >
-                                  <select
-                                    class="form-control"
-                                    id="parentCategory"
-                                  >
-                                    <option>None</option>
-                                    <option>Tools</option>
-                                    <option>Food</option>
-                                    <option>Snacks</option>
-                                    <option>Craft</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div class="col-lg-12 mt-4">
-                                <div class="form-group">
-                                  <div class="custom-file">
-                                    <input
-                                      type="file"
-                                      class="custom-file-input"
-                                      id="cImage"
-                                    />
-                                    <label
-                                      class="custom-file-label"
-                                      for="cImage"
-                                      >Choose Image</label
-                                    >
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -439,184 +383,207 @@
                     >
                       Close
                     </button>
-                    <button type="button" class="btn btn-primary">
-                      Save changes
-                    </button>
+                    <button type="button" class="btn btn-primary">Save</button>
                   </div>
                 </div>
               </div>
             </div>
             <!-- Content Row -->
             <div class="row">
-              <!-- Content Column -->
-              <div class="col-lg-12 mb-4">
-                <!-- Order Chart -->
-                <!-- DataTales Example -->
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      Category Table
-                    </h6>
-                  </div>
-                  <div class="card-body">
-                    <div class="table-responsive">
-                      <table
-                        class="table table-bordered"
-                        id="dataTable"
-                        width="100%"
-                        cellspacing="0"
+              <!-- Profile -->
+              <div class="col-lg-4">
+                <div class="container mt-2 mb-4 d-flex justify-content-center">
+                  <div class="card p-4">
+                    <div
+                      class="d-flex flex-column justify-content-center align-items-center"
+                    >
+                      <img
+                        class="rounded-circle mx-4"
+                        src="https://picsum.photos/200"
+                      />
+                      <span class="customerName mt-3">Tatyana Fitzpatrick</span>
+                      <span class="customerMail">example@domain.com</span>
+                      <div
+                        class="d-flex flex-row justify-content-center align-items-center gap-2"
                       >
-                        <thead>
-                          <tr>
-                            <th>
-                              <input
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
-                            </th>
-                            <th>Name</th>
-                            <th>Items</th>
-                            <th>Visibility</th>
-                            <th></th>
-                          </tr>
-                        </thead>
+                        <span class="customerPhone">+880170000000</span>
+                      </div>
+                      <!-- divider -->
+                      <hr class="profile-divider" />
+                    </div>
+                    <!-- order -->
+                    <div class="profileOrder">
+                      <div class="">Last Order</div>
+                      <div class="text-muted text-bold">
+                        <span>7</span> days ago -
+                        <span class="orderNo text-primary">#80294</span>
+                      </div>
+                    </div>
+                    <div class="profileOrder mt-4">
+                      <div class="">Total Order</div>
+                      <div class="text-muted text-bold">
+                        <span>3755</span> Tk.
+                      </div>
+                    </div>
+                    <div class="profileOrder mt-4">
+                      <div class="">Registered</div>
+                      <div class="text-muted text-bold">
+                        <span>7</span> Month ago
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- table -->
+              <div class="col-lg-8">
+                <div class="row mt-2">
+                  <div class="card" style="width: 45rem">
+                    <div
+                      class="card-header bg-white d-flex justify-content-between"
+                    >
+                      <span>Orders</span>
+                      <span
+                        >Total spent <span class="totalSpent">349980</span> on
+                        <span class="totalOrder">7</span> orders.</span
+                      >
+                    </div>
+                    <div class="card-body">
+                      <table class="table table-borderless">
                         <tbody>
                           <tr>
-                            <td>
-                              <input
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
-                            </td>
-                            <td>Tatyana Fitzpatrick</td>
-                            <td><span>72</span></td>
-                            <td>
-                              <div class="badge badge-secondary">Hidden</div>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btn btn-sa-muted btn-sm"
-                                  type="button"
-                                  id="CatDropdown"
-                                  data-toggle="dropdown"
-                                  aria-expanded="false"
-                                  aria-level="More"
-                                >
-                                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                                </button>
-                                <ul
-                                  class="dropdown-menu dropdown-menu-end"
-                                  aria-labelledby=""
-                                >
-                                  <li>
-                                    <a
-                                      class="dropdown-item"
-                                      data-toggle="modal"
-                                      data-target="#addModalCenter"
-                                      >Edit</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item" href="#">Delete</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
+                            <th scope="row">1</th>
+                            <td style="width: 0%">#80294</td>
+                            <td>Today at 6:19 pm</td>
+                            <td>Pending</td>
+                            <td>4 items</td>
+                            <td>320.00 Tk.</td>
                           </tr>
                           <tr>
-                            <td>
-                              <input
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
-                            </td>
-                            <td>Grocery</td>
-                            <td><span>102</span></td>
-                            <td>
-                              <div class="badge badge-success">Visible</div>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btn btn-sa-muted btn-sm"
-                                  type="button"
-                                  id="CatDropdown"
-                                  data-toggle="dropdown"
-                                  aria-expanded="false"
-                                  aria-level="More"
-                                >
-                                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                                </button>
-                                <ul
-                                  class="dropdown-menu dropdown-menu-end"
-                                  aria-labelledby=""
-                                >
-                                  <li>
-                                    <a
-                                      class="dropdown-item"
-                                      data-toggle="modal"
-                                      data-target="#addModalCenter"
-                                      >Edit</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item" href="#">Delete</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
+                            <th scope="row">2</th>
+                            <td>#80294</td>
+                            <td>Today at 6:19 pm</td>
+                            <td>Pending</td>
+                            <td>4 items</td>
+                            <td>320.00 Tk.</td>
                           </tr>
                           <tr>
-                            <td>
-                              <input
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
-                            </td>
-                            <td>Grocery</td>
-                            <td><span>102</span></td>
-                            <td>
-                              <div class="badge badge-success">Visible</div>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btn btn-sa-muted btn-sm"
-                                  type="button"
-                                  id="CatDropdown"
-                                  data-toggle="dropdown"
-                                  aria-expanded="false"
-                                  aria-level="More"
-                                >
-                                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                                </button>
-                                <ul
-                                  class="dropdown-menu dropdown-menu-end"
-                                  aria-labelledby=""
-                                >
-                                  <li>
-                                    <a
-                                      class="dropdown-item"
-                                      data-toggle="modal"
-                                      data-target="#addModalCenter"
-                                      >Edit</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item" href="#">Delete</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
+                            <th scope="row">3</th>
+                            <td>#80294</td>
+                            <td>Today at 6:19 pm</td>
+                            <td>Pending</td>
+                            <td>4 items</td>
+                            <td>320.00 Tk.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>#80294</td>
+                            <td>Today at 6:19 pm</td>
+                            <td>Pending</td>
+                            <td>4 items</td>
+                            <td>320.00 Tk.</td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
+                    <div
+                      class="card-footer bg-white d-flex justify-content-center"
+                    >
+                      <a href="order.html">View All Orders</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="card" style="width: 45rem">
+                    <div
+                      class="card-header bg-white d-flex justify-content-between"
+                    >
+                      <span>Addresses</span>
+                      <span><a href="#">New Address</a></span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        <div class="loc">
+                          <p class="m-0">Jessica Moore</p>
+                          <span class="text-muted text-small"
+                            >Random Federation 115302, Moscow ul. Varshavskaya,
+                            15-2-178</span
+                          >
+                        </div>
+                        <div class="">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-sa-muted btn-sm"
+                              type="button"
+                              id="CatDropdown"
+                              data-toggle="dropdown"
+                              aria-expanded="false"
+                              aria-level="More"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul
+                              class="dropdown-menu dropdown-menu-end"
+                              aria-labelledby=""
+                            >
+                              <li>
+                                <a
+                                  class="dropdown-item"
+                                  data-toggle="modal"
+                                  data-target="#addModalCenter"
+                                  >Edit</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">Delete</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        <div class="loc">
+                          <p class="m-0">Jessica Moore</p>
+                          <span class="text-muted text-small"
+                            >Random Federation 115302, Moscow ul. Varshavskaya,
+                            15-2-178</span
+                          >
+                        </div>
+                        <div class="">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-sa-muted btn-sm"
+                              type="button"
+                              id="CatDropdown"
+                              data-toggle="dropdown"
+                              aria-expanded="false"
+                              aria-level="More"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul
+                              class="dropdown-menu dropdown-menu-end"
+                              aria-labelledby=""
+                            >
+                              <li>
+                                <a
+                                  class="dropdown-item"
+                                  data-toggle="modal"
+                                  data-target="#addModalCenter"
+                                  >Edit</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">Delete</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

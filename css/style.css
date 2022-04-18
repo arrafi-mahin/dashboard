@@ -13,3 +13,24 @@
 .modal-category {
   max-width: 800px !important;
 }
+/* Customer profile */
+
+.customerName {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.customerMail {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.customerPhone {
+  font-size: 12px;
+}
+.profile-divider {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  position: relative;
+  width: 100%;
+}

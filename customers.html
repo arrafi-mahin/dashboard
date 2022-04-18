@@ -10,7 +10,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Category</title>
+    <title>Customers</title>
 
     <!-- Custom fonts for this template-->
     <link
@@ -58,16 +58,16 @@
           >
         </li>
 
-        <li class="nav-item active">
-          <a class="nav-link" href="#">
+        <li class="nav-item">
+          <a class="nav-link" href="category.html">
             <i class="fas fa-bars"></i
             ><i class="fa-solid fa-grid-horizontal"></i>
             <span>Category</span></a
           >
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="customers.html">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">
             <i class="fas fa-users"></i
             ><i class="fa-solid fa-grid-horizontal"></i>
             <span>Customers</span></a
@@ -268,7 +268,7 @@
             <div
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
-              <h1 class="h3 mb-0 text-gray-800">Category List</h1>
+              <h1 class="h3 mb-0 text-gray-800">Customers List</h1>
               <div class="buttons">
                 <!-- Update Button -->
                 <button
@@ -277,7 +277,7 @@
                   data-toggle="modal"
                   data-target="#addModalCenter"
                 >
-                  <i class="fa-solid fa-pen-to-square pr-2"></i>Add New
+                  <i class="fa-solid fa-pen-to-square pr-2"></i>New Customer
                 </button>
               </div>
             </div>
@@ -290,10 +290,7 @@
               aria-labelledby="addModalCenterTitle"
               aria-hidden="true"
             >
-              <div
-                class="modal-dialog modal-category modal-dialog-centered"
-                role="document"
-              >
+              <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title" id="addModalCenterTitle">
@@ -311,39 +308,46 @@
                   <div class="modal-body">
                     <div class="row">
                       <!-- Content Column -->
-                      <div class="col-lg-8 mb-4">
+                      <div class="col-lg-12 mb-4">
                         <div class="card bg-white mb-4">
                           <div class="card-body">
                             <h5>Basic information</h5>
                             <form action="">
                               <div class="form-row">
-                                <div class="form-group col-md-12">
-                                  <label for="cName">Name</label>
+                                <div class="form-group col-md-6">
+                                  <label for="sName">Shop</label>
                                   <input
                                     type="text"
                                     class="form-control"
-                                    id="cName"
-                                    placeholder="Category Name"
+                                    id="sName"
+                                    placeholder="Shop Name"
+                                  />
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="oName">Owner</label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="oName"
+                                    placeholder="Owner Name"
                                   />
                                 </div>
                                 <div class="form-group col-md-12">
-                                  <label for="slug">slug</label>
+                                  <label for="slug">Mobile</label>
                                   <div class="input-group mb-2 mr-sm-2">
                                     <div class="input-group-prepend">
-                                      <div class="input-group-text">
-                                        safeline.com/category/
-                                      </div>
+                                      <div class="input-group-text">+880</div>
                                     </div>
                                     <input
                                       type="text"
                                       class="form-control"
                                       id="slug"
-                                      placeholder="hand-tools"
+                                      placeholder=""
                                     />
                                   </div>
                                 </div>
                                 <div class="form-group col-lg-12">
-                                  <label for="cDescription">Description</label>
+                                  <label for="cDescription">Address</label>
                                   <textarea
                                     class="form-control"
                                     id="cDescription"
@@ -352,80 +356,6 @@
                                 </div>
                               </div>
                             </form>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-4">
-                        <div class="card bg-white">
-                          <div class="card-body">
-                            <div class="form-row">
-                              <div class="col-lg-12">
-                                <h5>Visibilty</h5>
-                              </div>
-                              <div class="col-lg-12">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input position-static"
-                                    type="radio"
-                                    name="cPublish"
-                                    id="cPublish"
-                                    value="Published"
-                                  />
-                                  <label class="form-check-label" for="cPublish"
-                                    >Published</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-lg-12">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input position-static"
-                                    type="radio"
-                                    name="cPublish"
-                                    id="cPublish"
-                                    value="Hidden"
-                                    aria-label="Hidden"
-                                  />
-                                  <label class="form-check-label" for="cPublish"
-                                    >Hidden</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-lg-12 mt-4">
-                                <div class="form-group">
-                                  <label for="parentCategory"
-                                    >Parent Category</label
-                                  >
-                                  <select
-                                    class="form-control"
-                                    id="parentCategory"
-                                  >
-                                    <option>None</option>
-                                    <option>Tools</option>
-                                    <option>Food</option>
-                                    <option>Snacks</option>
-                                    <option>Craft</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div class="col-lg-12 mt-4">
-                                <div class="form-group">
-                                  <div class="custom-file">
-                                    <input
-                                      type="file"
-                                      class="custom-file-input"
-                                      id="cImage"
-                                    />
-                                    <label
-                                      class="custom-file-label"
-                                      for="cImage"
-                                      >Choose Image</label
-                                    >
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -439,9 +369,7 @@
                     >
                       Close
                     </button>
-                    <button type="button" class="btn btn-primary">
-                      Save changes
-                    </button>
+                    <button type="button" class="btn btn-primary">Save</button>
                   </div>
                 </div>
               </div>
@@ -455,7 +383,7 @@
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">
-                      Category Table
+                      Customer Table
                     </h6>
                   </div>
                   <div class="card-body">
@@ -476,8 +404,9 @@
                               />
                             </th>
                             <th>Name</th>
-                            <th>Items</th>
-                            <th>Visibility</th>
+                            <th>Registered</th>
+                            <th>Area</th>
+                            <th>Spent</th>
                             <th></th>
                           </tr>
                         </thead>
@@ -490,99 +419,17 @@
                                 id="flexCheckDefault"
                               />
                             </td>
-                            <td>Tatyana Fitzpatrick</td>
-                            <td><span>72</span></td>
                             <td>
-                              <div class="badge badge-secondary">Hidden</div>
+                              <p class="m-0">
+                                <a href="cProfile.html">Tatyana Fitzpatrick</a>
+                              </p>
+                              <small>example@domain.com</small>
                             </td>
+                            <td><span>13-04-2022</span></td>
                             <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btn btn-sa-muted btn-sm"
-                                  type="button"
-                                  id="CatDropdown"
-                                  data-toggle="dropdown"
-                                  aria-expanded="false"
-                                  aria-level="More"
-                                >
-                                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                                </button>
-                                <ul
-                                  class="dropdown-menu dropdown-menu-end"
-                                  aria-labelledby=""
-                                >
-                                  <li>
-                                    <a
-                                      class="dropdown-item"
-                                      data-toggle="modal"
-                                      data-target="#addModalCenter"
-                                      >Edit</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item" href="#">Delete</a>
-                                  </li>
-                                </ul>
-                              </div>
+                              <div class="">Uttara 6</div>
                             </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <input
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
-                            </td>
-                            <td>Grocery</td>
-                            <td><span>102</span></td>
-                            <td>
-                              <div class="badge badge-success">Visible</div>
-                            </td>
-                            <td>
-                              <div class="dropdown">
-                                <button
-                                  class="btn btn-sa-muted btn-sm"
-                                  type="button"
-                                  id="CatDropdown"
-                                  data-toggle="dropdown"
-                                  aria-expanded="false"
-                                  aria-level="More"
-                                >
-                                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                                </button>
-                                <ul
-                                  class="dropdown-menu dropdown-menu-end"
-                                  aria-labelledby=""
-                                >
-                                  <li>
-                                    <a
-                                      class="dropdown-item"
-                                      data-toggle="modal"
-                                      data-target="#addModalCenter"
-                                      >Edit</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item" href="#">Delete</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <input
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
-                            </td>
-                            <td>Grocery</td>
-                            <td><span>102</span></td>
-                            <td>
-                              <div class="badge badge-success">Visible</div>
-                            </td>
+                            <td><span>1221</span> Tk.</td>
                             <td>
                               <div class="dropdown">
                                 <button
