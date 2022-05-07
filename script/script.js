@@ -47,3 +47,4 @@
         e.preventDefault();
     });
 })(jQuery);
+
